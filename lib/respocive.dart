@@ -4,6 +4,14 @@ import 'package:data_connection_checker_tv/data_connection_checker.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
+class NetworkUtils {
+  static Future<bool> isNetworkConnected() async {
+    DataConnectionChecker dataConnectionChecker = DataConnectionChecker();
+    DataConnectionStatus status = await dataConnectionChecker.connectionStatus;
+    return status == DataConnectionStatus.connected;
+  }
+}
+
 class ResponsiveData extends InheritedWidget {
   final double screenWidth;
   final double screenHeight;
