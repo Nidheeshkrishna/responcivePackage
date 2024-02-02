@@ -54,9 +54,9 @@ class ResponsiveData extends InheritedWidget {
           isTablet() ? screenHeight.clamp(3.5, 4.5) : screenHeight.clamp(3, 4);
     }
     if (isTablet()) {
-      textFactorcalculated = 1.2
+      textFactorcalculated = 1.2;
     } else {
-      textFactorcalculated = 1.0
+      textFactorcalculated = 1.0;
     }
 
     safeAreaHorizontal = MediaQuery.paddingOf(context).left +
